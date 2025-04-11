@@ -14,14 +14,11 @@ A smart locker management system built with Flask, SQLite, and Raspberry Pi. The
 
 Poniżej znajdują się zdjęcia przedstawiające skrytki użyte w systemie:
 
-### Skrytka 1
-![Skrytka 1](images/zdjecie1.jpg)
-
-### Skrytka 2
-![Skrytka 2](images/zdjecie2.jpg)
-
-### Skrytka 3
-![Skrytka 3](images/zdjecie3.jpg)
+<p float="left">
+  <img src="images/zdjecie1.jpg" alt="Skrytka 1" width="200"/>
+  <img src="images/zdjecie2.jpg" alt="Skrytka 2" width="200"/>
+  <img src="images/zdjecie3.jpg" alt="Skrytka 3" width="200"/>
+</p>
 
 ## Database Structure (SQLite)
 
