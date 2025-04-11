@@ -152,32 +152,6 @@ def update_locker_status(locker_id, status):
     conn.close()
 ```
 
-### Transaction Example
-
-```python
-def reserve_locker(locker_id, user_id):
-    conn = sqlite3.connect(DB_NAME)
-    c = conn.cursor()
-    try:
-        c.execute("BEGIN TRANSACTION")
-        # Check if locker is available
-        c.execute("SELECT occupied FROM lockers WHERE id=?", (locker_id,))
-        occupied = c.fetchone()[0]
-        if occupied:
-            c.execute("ROLLBACK")
-            return False
-        
-        # Reserve locker
-        c.execute("UPDATE lockers SET occupied=1, owner_id=? WHERE id=?", 
-                  (user_id, locker_id))
-        c.execute("COMMIT")
-        return True
-    except:
-        c.execute("ROLLBACK")
-        return False
-    finally:
-        conn.close()
-```
 
 ## Client Application
 
@@ -190,11 +164,3 @@ Run the client with:
 ```bash
 python app_client.py
 ```
-
-## Security Considerations
-
-For a production environment, consider these improvements:
-- Implement password hashing
-- Use HTTPS for API communication
-- Add rate limiting for authentication attempts
-- Implement proper session management
