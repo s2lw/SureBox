@@ -10,6 +10,19 @@ A smart locker management system built with Flask, SQLite, and Raspberry Pi. The
 - **Mobile App**: Kivy-based client application for remote management
 - **Hardware Control**: Servo motors for locking mechanism and sensors for locker state detection
 
+## Locker Photos
+
+Poniżej znajdują się zdjęcia przedstawiające skrytki użyte w systemie:
+
+### Skrytka 1
+![Skrytka 1](images/zdjecie1.jpg)
+
+### Skrytka 2
+![Skrytka 2](images/zdjecie2.jpg)
+
+### Skrytka 3
+![Skrytka 3](images/zdjecie3.jpg)
+
 ## Database Structure (SQLite)
 
 The system uses SQLite for data persistence. The database file is named `lockers.db` and contains two main tables:
