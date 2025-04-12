@@ -24,48 +24,6 @@ Poniżej znajdują się zdjęcia przedstawiające skrytki użyte w systemie:
 
 The system uses SQLite for data persistence. The database file is named `lockers.db` and contains two main tables:
 
-### Users Table
-
-```sql
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE,
-    password TEXT,
-    token TEXT,
-    code TEXT
-)
-```
-
-Fields:
-- `id`: Unique user identifier
-- `username`: Unique login name
-- `password`: User password (stored in plain text - for production, use hashing)
-- `token`: Authentication token for API access
-- `code`: 4-digit PIN code for physical locker access
-
-### Lockers Table
-
-```sql
-CREATE TABLE IF NOT EXISTS lockers (
-    id INTEGER PRIMARY KEY,
-    servo_pin INTEGER,
-    sensor_pin INTEGER,
-    status TEXT,
-    occupied BOOLEAN,
-    closed BOOLEAN,
-    owner_id INTEGER
-)
-```
-
-Fields:
-- `id`: Locker identifier
-- `servo_pin`: GPIO pin connected to the servo motor
-- `sensor_pin`: GPIO pin connected to the door sensor
-- `status`: Current state ("locked" or "unlocked")
-- `occupied`: Whether the locker is reserved by a user
-- `closed`: Whether the locker door is closed
-- `owner_id`: ID of the user who has reserved the locker (foreign key to users.id)
-
 ## Server Implementation (server.py)
 
 The server is built with Flask and handles both the hardware control and API endpoints.
