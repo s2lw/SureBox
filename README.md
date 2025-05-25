@@ -118,6 +118,12 @@ The system includes a Kivy-based mobile client (`app_client.py`) that allows use
 - View all lockers and their status
 - Reserve, open, close and return lockers
 
+### Authors
+
+Jędrzej Bartosiak
+Igor Taciak
+Jan Paluszkiewicz
+Mateusz Górecki
 Run the client with:
 ```bash
 python app_client.py
