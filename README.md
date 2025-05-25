@@ -125,7 +125,7 @@ python app_client.py
 
 ### Authors
 
-Jędrzej Bartosiak
-Igor Taciak
-Jan Paluszkiewicz
+Jędrzej Bartosiak\
+Igor Taciak\
+Jan Paluszkiewicz\
 Mateusz Górecki
