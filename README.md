@@ -22,7 +22,7 @@ Poniżej znajdują się zdjęcia przedstawiające skrytki użyte w systemie:
 
 ## Database Structure (SQLite)
 
-The system uses SQLite for data persistence. The database file is named `lockers.db` and contains two main tables:
+The system uses SQLite for data persistence. The database file is named `lockers.db` and contains two tables.
 
 ## Server Implementation (server.py)
 
