@@ -1,5 +1,5 @@
 # Locker Management System
-
+ 
 A smart locker management system built with Flask, SQLite, and Raspberry Pi. The system allows users to reserve, open, and return lockers using both a physical keypad interface and a mobile application.
 
 ## Features
